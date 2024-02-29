@@ -21,10 +21,12 @@
           },
           backgroundImage: {
             introMobileWave: "url('images/bg-curvy-mobile.svg')",
-            bgQuotes: "url('images/bg-quotes.png')"
+            bgQuotes: "url('images/bg-quotes.png')",
+            bgDesktopWave: "url('images/bg-curvy-desktop.svg')"
           },
           backgroundPosition: {
           'center-bottom': 'center bottom 1rem',
+          'desktop-center-bottom': 'center top'
     }
         }
       }
@@ -38,7 +40,7 @@
 </head>
 <body class ='container bg-mainBackground text-white'>
 
-  <div class="flex justify-between px-6 py-6 bg-accentBackground">
+  <div class="flex justify-between px-6 sm:px-14 py-6 bg-accentBackground">
     <img src="images\logo.svg" class="w-24">
     <div class="text-sm flex">
       <a class="mr-6">Features<a>
@@ -47,46 +49,50 @@
     </div>
   </div>
 
-  <div class="flex flex-col bg-accentBackground items-center bg-introMobileWave bg-contain bg-no-repeat bg-center-bottom">
-    <img src="images\illustration-intro.png" class="w-80 mt-6">
-    <h3 class="text-center text-2xl font-semibold mt-6">All your files in one secure</h3>
-    <h3 class="text-center text-2xl font-semibold">location, accessible</h3>
-    <h3 class="text-center text-2xl font-semibold bg-mainBackground w-full">anywhere.</h3>
+  <div class="flex flex-col bg-accentBackground items-center bg-introMobileWave bg-contain bg-no-repeat bg-center-bottom sm:bg-bgDesktopWave sm:bg-cover sm:bg-desktop-center-bottom">
+    <img src="images\illustration-intro.png" class="w-80 mt-14 sm:w-2/5">
+    <h3 class="text-center text-2xl font-semibold mt-6 sm:hidden">All your files in one secure</h3>
+    <h3 class="text-center text-2xl font-semibold sm:hidden">location, accessible</h3>
+    <h3 class="text-center text-2xl font-semibold bg-mainBackground w-full sm:hidden">anywhere.</h3>
+    <h3 class="text-center text-3xl font-semibold mt-6 hidden sm:block">All your files in one secure location,<br/> accessible anywhere.</h3>
   </div>
 
-  <div class="flex flex-col bg-mainBackground mt-4">
-    <p class="text-center text-sm">
+  <div class="flex flex-col bg-mainBackground mt-6">
+    <!-- <p class="text-center text-sm sm:hidden">
       Fylo stores all your most important files in <br/> one secure location. Access them wherever <br/> 
       you need, share and collaborate with friends <br/> family, and co-workers.
+    </p> -->
+    <p class="text-center text-sm w-[18rem] sm:text-md sm:w-[29rem] mx-auto">
+      Fylo stores all your most important files in one secure location. Access them wherever you need, share and collaborate with friends family, and co-workers.  
     </p>
 
-    <button class="bg-accentBlue w-fit px-20 py-3 mx-auto mt-6 text-sm font-semibold rounded-full">
+    <button class="bg-accentBlue w-fit px-20 py-3 mx-auto mt-8 text-sm font-semibold rounded-full">
       Get Started
     </button>
   </div>
 
-  <div class="container mt-20">
+  <div class="container mt-32 sm:grid sm:grid-rows-2 sm:grid-cols-2	">
 
-    <div class="flex flex-col items-center px-8">
+    <div class="flex flex-col items-center px-8 sm:mt-20">
       <img src="images/icon-access-anywhere.svg" class="w-14" />
       <h3 class="text-lg font-semibold text-center mt-4"> Access your files, anywhere</h3>
       <p class="text-sm text-center mt-2">The ability to use a smartphone, tablet, or <br/> computer to access your account means your <br/> files follow you everywhere.</p>
     </div>
     
 
-    <div class="flex flex-col items-center px-8 mt-16">
+    <div class="flex flex-col items-center px-8 mt-20">
       <img src="images/icon-security.svg" class="w-14" />
       <h3 class="text-lg font-semibold text-center mt-4">Security you can trust</h3>
       <p class="text-sm text-center mt-2">2-factor authentication and user-controlled <br/> encryption are just a couple of the security <br/> features we allow to help secure your files.</p>
     </div>
 
-    <div class="flex flex-col items-center px-8 mt-16">
+    <div class="flex flex-col items-center px-8 mt-20">
       <img src="images/icon-collaboration.svg" class="w-14" />
       <h3 class="text-lg font-semibold text-center mt-4">Real-time collaboration</h3>
       <p class="text-sm text-center mt-2">Securely share files and folders with friends, <br/> family and colleagues for live collaboration. <br/> No email attachments required.</p>
     </div>
 
-    <div class="flex flex-col items-center px-8 mt-16">
+    <div class="flex flex-col items-center px-8 mt-20">
       <img src="images/icon-any-file.svg" class="w-14" />
       <h3 class="text-lg font-semibold text-center mt-4">Store any type of file</h3>
       <p class="text-sm text-center mt-2">Whether you're sharing holidays photos or work <br/> documents, Fylo has you covered allowing for all <br/> file types to be securely stored and shared.</p>
@@ -94,7 +100,7 @@
 
   </div>
 
-  <div class="container mt-20 px-8">
+  <div class="container mt-32 px-8 sm:flex">
     <img src="images/illustration-stay-productive.png" class="w-80 mx-auto"/>
     <div class="flex flex-col mt-10">
       <h3 class="text-lg font-semibold text-left">Stay productive, wherever you are</h3>
@@ -104,10 +110,10 @@
     </div>
   </div>
 
-  <div class="container px-8 mt-36">
+  <div class="container px-8 mt-32">
 
     <div class="flex flex-col">
-      <img src="images/bg-quotes.png" class="w-6"/>
+      <img src="images/bg-quotes.png" class="w-6 ml-2"/>
       <p class="bg-accentBackground pl-6 pt-6 text-xs">Fylo has improved our team productivity by an <br/> order of magnitude. Since making the switch our <br/> team has become a well-oiled collaboration <br/> machine.
       </p>
       <div class="flex bg-accentBackground pl-6 pb-5 pt-4 items-center ">
